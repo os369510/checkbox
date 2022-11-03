@@ -77,7 +77,7 @@ class StressNg():
         # LP:1983122 ensure the final stressor in the list is properly defined
         stressor_list = stressor_list + " {}".format(self.thread_count)
 
-        command = "stress-ng --aggressive --verify --timeout {} {} {}". \
+        command = "stress-ng --aggressive --verify --oomable --timeout {} {} {}". \
             format(self.sng_timeout,
                    self.extra_options,
                    stressor_list)
